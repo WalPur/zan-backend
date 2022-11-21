@@ -1,3 +1,7 @@
+from rest_framework.permissions import (
+    IsAuthenticatedOrReadOnly,
+    IsAuthenticated 
+)
 from rest_framework import viewsets
 
 from .models import (
@@ -11,12 +15,14 @@ from .serializator import (
 
 class NewsEndpoint(viewsets.ModelViewSet):
     queryset = Article.objects.all()
-    http_method_names = ['get', 'post']
+    http_method_names = ['get', 'post', 'patch']
+    permission_classes = [IsAuthenticatedOrReadOnly ]
     serializer_class = NewsSerializer
 
 
 class NewsListEndpoint(viewsets.ModelViewSet):
     http_method_names = ['get']
+    permission_classes = [IsAuthenticated]
     serializer_class = NewsListSerializer
 
     def get_queryset(self):
