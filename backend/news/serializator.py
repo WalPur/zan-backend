@@ -32,6 +32,7 @@ class NewsSerializer(serializers.ModelSerializer):
             "text",
             "pub_date",
             "uploaded_images",
+            "video",
             "image"
         )
 
