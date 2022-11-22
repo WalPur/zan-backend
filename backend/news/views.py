@@ -15,7 +15,7 @@ from .serializator import (
 
 class NewsEndpoint(viewsets.ModelViewSet):
     queryset = Article.objects.all()
-    http_method_names = ['get', 'post', 'patch']
+    http_method_names = ['get', 'post', 'patch', 'delete']
     permission_classes = [IsAuthenticatedOrReadOnly ]
     serializer_class = NewsSerializer
     filter_backends = (filters.OrderingFilter,)
