@@ -97,7 +97,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-Ru'
 
 TIME_ZONE = 'UTC'
 
@@ -106,10 +106,10 @@ USE_I18N = True
 USE_TZ = True
 
 
-STATIC_URL ='/django_static/'
-STATIC_ROOT = BASE_DIR / 'static'
-MEDIA_URL = '/django_media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+STATIC_URL ='/static/'
+STATIC_ROOT = '/static'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/media'
 
 
 

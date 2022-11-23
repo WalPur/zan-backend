@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  django:
+    build: /backend
+    command: sh -c "gunicorn --bind 0.0.0.0:8000 backend.wsgi"
+    volumes:
+      - .:/app
+      - /static:/static
+      - /media:/media
+    env_file:
+      - '.env'
+    ports:
+      - '8000:8000'
+
+volumes:
+  static_volume:
+  media_volume:
