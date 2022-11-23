@@ -3,7 +3,7 @@ version: '3.3'
 services:
   django:
     build: ./backend
-    command: sh -c "gunicorn --bind 0.0.0.0:8000 backend.wsgi"
+    command: "gunicorn backend.wsgi --bind 0.0.0.0:8000"
     volumes:
       - .:/app
       - /static:/static
