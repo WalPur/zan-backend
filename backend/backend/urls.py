@@ -18,6 +18,7 @@ schema_view = get_schema_view(
 )
 
 api_views = [
+    path('api/', include('feedback.urls')),
     path('api/', include('news.urls')),
     path('api/', include('promoblocks.urls')),
     path('api/user/login', obtain_auth_token, name='login')
