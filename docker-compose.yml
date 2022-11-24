@@ -5,7 +5,7 @@ services:
     build: ./backend
     command: "gunicorn backend.wsgi --bind 0.0.0.0:8000"
     volumes:
-      - .:/app
+      - ./backend:/app
       - /static:/static
       - /media:/media
     env_file:
