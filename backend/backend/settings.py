@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'news',
     'promoblocks',
     'feedback',
+    'partners',
 ]
 
 
