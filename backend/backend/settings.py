@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'promoblocks',
     'feedback',
     'partners',
+    'vacations',
 ]
 
 
